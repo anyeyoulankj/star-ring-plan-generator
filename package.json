@@ -6,7 +6,7 @@
   "scripts": {
     "dev:client": "vite --host --port 3000",
     "dev": "pnpm dev:client",
-    "build:client": "vite build --outDir dist/static",
+    "build:client": "vite build --outDir dist",
     "build": "rimraf dist && pnpm build:client && node -e \"require('fs').writeFileSync('dist/package.json', require('fs').readFileSync('package.json'))\" && node -e \"require('fs').writeFileSync('dist/build.flag', '')\"",
     "electron:dev": "vite --mode electron",
     "electron:build": "vite build --mode electron && electron-builder"
